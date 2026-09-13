@@ -26,6 +26,14 @@ export interface SectorMeta {
   label: string;
   description: string;
   specColumns: { key: string; label: string }[];
+  /** Short badge text (2-3 chars), e.g. "AI", "Q". */
+  monogram: string;
+  /** Tailwind classes for the monogram badge background/text. */
+  accentBadge: string;
+  /** Tailwind classes for accent text (headings, links). */
+  accentText: string;
+  /** Tailwind class for a solid accent background (progress dots, bars). */
+  accentSolid: string;
 }
 
 export interface Trend {
