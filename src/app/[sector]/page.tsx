@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getSectorData, getSectorMeta, getSectorSlugs, getSectorTrends } from "@/lib/data";
 import type { SectorSlug } from "@/data";
+import { SectorIcon } from "@/components/icons/SectorIcon";
 
 export function generateStaticParams() {
   return getSectorSlugs().map((sector) => ({ sector }));
@@ -19,9 +20,17 @@ export default function SectorPage({ params }: { params: { sector: string } }) {
 
   return (
     <div className="space-y-4">
-      <div>
-        <h1 className="text-2xl font-semibold">{meta.label}</h1>
-        <p className="text-sm text-neutral-500">{meta.description}</p>
+      <div className="overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800">
+        <div className={`h-1.5 bg-gradient-to-r ${meta.accentGradient}`} />
+        <div className="flex items-center gap-4 p-4">
+          <div className={`inline-flex shrink-0 rounded-lg p-3 ${meta.accentBadge}`}>
+            <SectorIcon slug={slug} className="h-7 w-7" />
+          </div>
+          <div>
+            <h1 className="text-2xl font-semibold">{meta.label}</h1>
+            <p className="text-sm text-neutral-500">{meta.description}</p>
+          </div>
+        </div>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full min-w-[900px] text-left text-xs">

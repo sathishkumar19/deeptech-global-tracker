@@ -1,4 +1,5 @@
 import { getAllCompanies, getSectorSlugs, getSectorMeta, getSectorData } from "@/lib/data";
+import { SectorIcon } from "@/components/icons/SectorIcon";
 
 export default function DashboardPage() {
   const companies = getAllCompanies();
@@ -27,10 +28,16 @@ export default function DashboardPage() {
             <a
               key={slug}
               href={`/${slug}`}
-              className="min-w-[160px] rounded border border-neutral-200 p-4 hover:border-neutral-400"
+              className="group min-w-[180px] overflow-hidden rounded-lg border border-neutral-200 bg-white transition hover:border-neutral-300 hover:shadow-sm dark:border-neutral-800 dark:bg-neutral-900"
             >
-              <p className="text-sm text-neutral-500">{meta.label}</p>
-              <p className="text-3xl font-bold">{count}</p>
+              <div className={`h-1.5 bg-gradient-to-r ${meta.accentGradient}`} />
+              <div className="p-4">
+                <div className={`mb-3 inline-flex rounded-lg p-2.5 ${meta.accentBadge}`}>
+                  <SectorIcon slug={slug} className="h-6 w-6" />
+                </div>
+                <p className="text-sm text-neutral-500">{meta.label}</p>
+                <p className="text-3xl font-bold">{count}</p>
+              </div>
             </a>
           );
         })}

@@ -16,6 +16,7 @@ export const sectors: Record<SectorSlug, SectorMeta> = {
     accentBadge: "bg-blue-100 text-blue-700 dark:bg-blue-500/15 dark:text-blue-300",
     accentText: "text-blue-600 dark:text-blue-400",
     accentSolid: "bg-blue-500",
+    accentGradient: "from-blue-500 to-cyan-400",
   },
   "drones-uav": {
     slug: "drones-uav",
@@ -31,6 +32,7 @@ export const sectors: Record<SectorSlug, SectorMeta> = {
     accentBadge: "bg-amber-100 text-amber-700 dark:bg-amber-500/15 dark:text-amber-300",
     accentText: "text-amber-600 dark:text-amber-400",
     accentSolid: "bg-amber-500",
+    accentGradient: "from-amber-500 to-orange-400",
   },
   quantum: {
     slug: "quantum",
@@ -45,6 +47,7 @@ export const sectors: Record<SectorSlug, SectorMeta> = {
     accentBadge: "bg-violet-100 text-violet-700 dark:bg-violet-500/15 dark:text-violet-300",
     accentText: "text-violet-600 dark:text-violet-400",
     accentSolid: "bg-violet-500",
+    accentGradient: "from-violet-500 to-fuchsia-400",
   },
   semiconductors: {
     slug: "semiconductors",
@@ -59,6 +62,7 @@ export const sectors: Record<SectorSlug, SectorMeta> = {
     accentBadge: "bg-teal-100 text-teal-700 dark:bg-teal-500/15 dark:text-teal-300",
     accentText: "text-teal-600 dark:text-teal-400",
     accentSolid: "bg-teal-500",
+    accentGradient: "from-teal-500 to-emerald-400",
   },
   spacetech: {
     slug: "spacetech",
@@ -74,6 +78,7 @@ export const sectors: Record<SectorSlug, SectorMeta> = {
     accentBadge: "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/15 dark:text-indigo-300",
     accentText: "text-indigo-600 dark:text-indigo-400",
     accentSolid: "bg-indigo-500",
+    accentGradient: "from-indigo-500 to-blue-400",
   },
   biotech: {
     slug: "biotech",
@@ -89,5 +94,6 @@ export const sectors: Record<SectorSlug, SectorMeta> = {
     accentBadge: "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300",
     accentText: "text-emerald-600 dark:text-emerald-400",
     accentSolid: "bg-emerald-500",
+    accentGradient: "from-emerald-500 to-lime-400",
   },
 };

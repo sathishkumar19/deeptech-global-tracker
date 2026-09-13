@@ -34,6 +34,8 @@ export interface SectorMeta {
   accentText: string;
   /** Tailwind class for a solid accent background (progress dots, bars). */
   accentSolid: string;
+  /** Tailwind `from-* to-*` classes for a dual-tone gradient (card strips, icon accents). */
+  accentGradient: string;
 }
 
 export interface Trend {
